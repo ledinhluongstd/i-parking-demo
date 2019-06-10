@@ -1,0 +1,328 @@
+{
+   "devices": [
+      {
+         "device_id": "urn:ngsi-ld:temperature:001",
+         "entity_name": "urn:ngsi-ld:temperature:001",
+         "entity_type": "mitc-iot-devices",
+         "attributes": [
+            {
+               "object_id": "t",
+               "name": "temperature",
+               "type": "float"
+            }
+         ],
+         "static_attributes": [
+            {
+               "name": "serial",
+               "type": "string",
+               "value": "TEMP-001-001"
+            },
+            {
+               "name": "unit",
+               "type": "string",
+               "value": "C"
+            },
+            {
+               "name": "refBuilding",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:building:001"
+            },
+            {
+               "name": "refBuildingFloor",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:buildingFloor:001"
+            }
+         ]
+      },
+      {
+         "device_id": "urn:ngsi-ld:smoke:001",
+         "entity_name": "urn:ngsi-ld:smoke:001",
+         "entity_type": "mitc-iot-devices",
+         "attributes": [
+            {
+               "object_id": "s",
+               "name": "smoke",
+               "type": "float"
+            }
+         ],
+         "static_attributes": [
+            {
+               "name": "serial",
+               "type": "string",
+               "value": "SMK-001-001"
+            },
+            {
+               "name": "unit",
+               "type": "string",
+               "value": "obs/m"
+            },
+            {
+               "name": "refBuilding",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:building:001"
+            },
+            {
+               "name": "refBuildingFloor",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:buildingFloor:001"
+            }
+         ]
+      },
+      {
+         "device_id": "urn:ngsi-ld:eswitch:001",
+         "entity_name": "urn:ngsi-ld:eswitch:001",
+         "entity_type": "mitc-iot-devices",
+         "attributes": [
+            {
+               "object_id": "s",
+               "name": "state",
+               "type": "Text"
+            }
+         ],
+         "static_attributes": [
+            {
+               "name": "serial",
+               "type": "string",
+               "value": "ES-001-001"
+            },
+            {
+               "name": "refBuilding",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:building:001"
+            },
+            {
+               "name": "refBuildingFloor",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:buildingFloor:001"
+            }
+         ],
+         "commands": [
+            {
+               "name": "on",
+               "type": "command"
+            },
+            {
+               "name": "off",
+               "type": "command"
+            }
+         ],
+         "protocol": "PDI-IoTA-UltraLight",
+         "transport": "MQTT"
+      },
+      {
+         "device_id": "urn:ngsi-ld:alarm:001",
+         "entity_name": "urn:ngsi-ld:alarm:001",
+         "entity_type": "mitc-iot-devices",
+         "attributes": [
+            {
+               "object_id": "s",
+               "name": "state",
+               "type": "Text"
+            }
+         ],
+         "static_attributes": [
+            {
+               "name": "serial",
+               "type": "string",
+               "value": "A-001-001"
+            },
+            {
+               "name": "refBuilding",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:building:001"
+            },
+            {
+               "name": "refBuildingFloor",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:buildingFloor:001"
+            }
+         ],
+         "commands": [
+            {
+               "name": "on",
+               "type": "command"
+            },
+            {
+               "name": "off",
+               "type": "command"
+            }
+         ],
+         "protocol": "PDI-IoTA-UltraLight",
+         "transport": "MQTT"
+      },
+      {
+         "device_id": "urn:ngsi-ld:watervalve:001",
+         "entity_name": "urn:ngsi-ld:watervalve:001",
+         "entity_type": "mitc-iot-devices",
+         "attributes": [
+            {
+               "object_id": "s",
+               "name": "state",
+               "type": "Text"
+            }
+         ],
+         "static_attributes": [
+            {
+               "name": "serial",
+               "type": "string",
+               "value": "WV-001-001"
+            },
+            {
+               "name": "refBuilding",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:building:001"
+            },
+            {
+               "name": "refBuildingFloor",
+               "type": "Relationship",
+               "value": "urn:ngsi-ld:buildingFloor:001"
+            }
+         ],
+         "commands": [
+            {
+               "name": "lock",
+               "type": "command"
+            },
+            {
+               "name": "unlock",
+               "type": "command"
+            }
+         ],
+         "protocol": "PDI-IoTA-UltraLight",
+         "transport": "MQTT"
+      },
+      {
+         "type": "Building",
+         "id": "urn:ngsi-ld:building:001",
+         "address": {
+            "type": "Text",
+            "value": "Thanh Xuân, Hà Nội"
+         },
+         "location": {
+            "type": "geo:json",
+            "value": {
+               "type": "Point",
+               "coordinates": [
+                  13.3941,
+                  52.5015
+               ]
+            }
+         },
+         "name": {
+            "type": "Text",
+            "value": "Toà nhà chung cư CT1"
+         },
+         "refOrganization": {
+            "type": "Relationship",
+            "value": "urn:ngsi-ld:organization:002"
+         }
+      },{
+         "type": "Building",
+         "id": "urn:ngsi-ld:building:002",
+         "address": {
+            "type": "Text",
+            "value": "Thanh Xuân, Hà Nội"
+         },
+         "location": {
+            "type": "geo:json",
+            "value": {
+               "type": "Point",
+               "coordinates": [
+                  13.3941,
+                  52.5015
+               ]
+            }
+         },
+         "name": {
+            "type": "Text",
+            "value": "Toà nhà chung cư CT2"
+         },
+         "refOrganization": {
+            "type": "Relationship",
+            "value": "urn:ngsi-ld:organization:002"
+         }
+      },
+      {
+         "type": "Organization",
+         "id": "urn:ngsi-ld:organization:001",
+         "address": {
+            "type": "Text",
+            "value": "Số 2A phố Đinh Lễ, quận Hoàn Kiếm, Hà Nội, Việt Nam"
+         },
+         "location": {
+            "type": "geo:json",
+            "value": {
+               "type": "Point",
+               "coordinates": [
+                  13.3995,
+                  52.5085
+               ]
+            }
+         },
+         "name": {
+            "type": "Text",
+            "value": "Cục cảnh sát phòng cháy, chữa cháy và cứu nạn, cứu hộ"
+         },
+         "email": {
+            "type": "Text",
+            "value": "vkhanh0727@gmail.com"
+         }
+      },
+      {
+         "type": "Organization",
+         "id": "urn:ngsi-ld:organization:002",
+         "address": {
+            "type": "Text",
+            "value": "Thanh Xuân, Hà Nội"
+         },
+         "location": {
+            "type": "geo:json",
+            "value": {
+               "type": "Point",
+               "coordinates": [
+                  13.3995,
+                  52.5085
+               ]
+            }
+         },
+         "name": {
+            "type": "Text",
+            "value": "Đơn vị quản lý toà nhà CT1"
+         },
+         "email": {
+            "type": "Text",
+            "value": "vkhanh0727@gmail.com"
+         }
+      },
+      {
+         "type": "Citizen",
+         "id": "urn:ngsi-ld:citizen:001",
+         "address": {
+            "type": "Text",
+            "value": "Thanh Xuân, Hà Nội"
+         },
+         "location": {
+            "type": "geo:json",
+            "value": {
+               "type": "Point",
+               "coordinates": [
+                  15.3995,
+                  52.5085
+               ]
+            }
+         },
+         "name": {
+            "type": "Text",
+            "value": "Nguyễn Văn A"
+         },
+         "email": {
+            "type": "Text",
+            "value": "564008975@qq.com"
+         },
+         "refBuilding": {
+            "type": "Relationship",
+            "value": "urn:ngsi-ld:building:001"
+         }
+      }
+   ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "node-easy-students-app",
+  "version": "1.0.0",
+  "description": "Never miss a thing in Life. Take students quickly. Organize and keep track of all your students.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "MongoDB",
+    "Mongoose",
+    "Students"
+  ],
+  "author": "callicoder",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.8",
+    "socket.io": "^2.2.0"
+  }
+}

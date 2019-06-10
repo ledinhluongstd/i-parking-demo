@@ -1,0 +1,30 @@
+language: node_js
+
+sudo: required
+
+node_js:
+ - "6"
+ - "8"
+ - "10"
+
+branches:
+  only:
+    - master
+
+services:
+ - rabbitmq
+ - docker
+ - mongodb
+
+install:
+ - npm install
+
+before_install:
+ - docker pull ansi/mosquitto
+ - docker run -d -p 1883:1883 -l mosquitto ansi/mosquitto
+
+before_script:
+  - npm run lint
+
+after_script: 
+  - npm run test:coveralls
