@@ -35,7 +35,7 @@
     "async": "2.6.1",
     "body-parser": "1.18.3",
     "dateformat": "3.0.3",
-    "express": "~4.16.4",
+    "express": "~4.17.3",
     "iotagent-node-lib": "git://github.com/telefonicaid/iotagent-node-lib.git#master",
     "logops": "2.1.0",
     "mqtt": "2.18.8",
